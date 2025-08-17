@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>THE STUFF TO REMEMBER</title>
+  <style>
+    body {
+      background: mistyrose;
+      font-family: cursive;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: deeppink;
+    }
+    .memory-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .memory {
+      background: white;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      opacity: 0;              
+      transform: translateY(30px) scale(0.8); /* smaller at start */
+      transition: all 0.6s ease;
+    }
+    .memory.show {
+      opacity: 1;
+      transform: translateY(0) scale(1); /* normal size */
+    }
+    .memory img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .message-box {
+      background: #fff0f5;
+      padding: 10px;
+      border-radius: 10px;
+      min-height: 60px;
+      font-size: 16px;
+      text-align: left;
+      white-space: pre-wrap;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      border: none;
+      background: hotpink;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    button:hover {
+      transform: scale(1.1); /* button hover also pops */
+    }
+  </style>
+</head>
+<body>
+  <h1>LOVE</h1>
+
+  <div class="memory-container">
+    <div class="memory"><img src="1.jpg"><div class="message-box">THE FIRST CONICIDENCE LIKE WE WERE ALWAYS MEANT TO BE</div></div>
+    <div class="memory"><img src="2.jpg"><div class="message-box">THE DAY I SAID I LOVEEEEEEEE YOUUUUU [we had said it bofore i konw we were cooked]</div></div>
+    <div class="memory"><img src="3.jpg"><div class="message-box">WE HELD HANDS AND KISSED PERFECT DAYYYYYYYY EXPECT THE DOG BITE OFC</div></div>
+    <div class="memory"><img src="4.jpg"><div class="message-box">>US AS BADDIEEEEEE I KINDA MISS US PLAYING ROBLOX PEAK TIMES</div></div>
+    <div class="memory"><img src="5.jpg"><div class="message-box">THIS DATE AHHHHHHHHHHHHH WHAT WERE WE ON YAARRRRRR MATLAB YOU WERE ON ME BUT THATS EXPECT THE POINT</div></div>
+    <div class="memory"><img src="6.jpg"><div class="message-box">EYES UP HERE ALSO THAMKYOUUU IPSHITA FOR THIS PHOTO</div></div>
+    <div class="memory"><img src="7.jpg"><div class="message-box">YAAR MY FIRST MUN WITH YOU AHHHHHHHH LIKE YAAD HAI U DROPING ME HOME COMING TO MY HOUSE IT WAS SOOOOOO NICE</div></div>
+    <div class="memory"><img src="8.jpg"><div class="message-box">YAAARRRRR THIS DATE WASSSSS LIKE MY FAVORATEEEEE WE TOOK SOOOO MANY GOOD PHOTOS RIDDHI BULLYIND ME AND YOU LOOKING SOOO PERRTTYYYY</div></div>
+    <div class="memory"><img src="9.jpg"><div class="message-box">CAN NEVER FORGET YOU IN A SAREE FUCKKKKKKKKKKKK LOVEEEEE YOUUUUU YIP MY BEST AND FAVORATE MUN ALSO HUM DONO HOME AUR PRIME MINISTER AHHHHH</div></div>
+    <div class="memory"><img src="10.jpg"><div class="message-box">AND NAGPUR IT WASSSS SOOOO NICE BEING ABLE TO COME TO YOU WHENEVER YAAARRRRRR ALSO IT WASSS SOOOOOOO FUN</div></div>
+  </div>
+
+  <button onclick="window.location.href='love-letter.html'">CLICK ME</button>
+
+  <script>
+    // Select all memory divs
+    const memories = document.querySelectorAll('.memory');
+
+    // Loop through each and show them one by one
+    memories.forEach((memory, index) => {
+      setTimeout(() => {
+        memory.classList.add('show');
+      }, index * 700); // 700ms delay between each pop
+    });
+  </script>
+</body>
+</html>
